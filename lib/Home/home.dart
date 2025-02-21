@@ -29,21 +29,23 @@ class _HomeState extends State<Home> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          backgroundColor:isLight ? Colors.pink[200] : Colors.purpleAccent,
-          elevation: 15, 
+          backgroundColor: isLight ? Colors.pink[300] : Colors.purpleAccent,
+          elevation: 15,
           shadowColor: Colors.purpleAccent.withOpacity(0.7),
-          shape:const RoundedRectangleBorder(
+          shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.vertical(
               bottom: Radius.circular(50),
             ),
           ),
           centerTitle: true,
-          title: Text(isLight? 'سبّح، فالذكر راحة ونور.' : 'سبّح بحمد ربك، ترتاح روحك. ' ,
-          style: TextStyle(
-            fontSize: 25,
-            fontFamily: 'cairo',
-            color:isLight? Colors.black : Colors.white,
-          ),
+          title: Text(
+            isLight ? 'سبّح فالذكر راحة ونور' : 'سبّح بحمد ربك ترتاح روحك ',
+            style: TextStyle(
+              fontSize: 25,
+              fontFamily: 'cairo',
+              fontWeight: FontWeight.bold,
+              color: isLight ? Colors.black : Colors.white,
+            ),
           ),
         ),
         backgroundColor: isLight ? Color(0xff1E1E1E) : Colors.white,
@@ -53,12 +55,11 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                width: 150,
-                height: 150,
+                width: 200,
+                height: 200,
                 decoration: BoxDecoration(
                     gradient: const LinearGradient(
-                      colors: [Colors.purpleAccent,
-                       Colors.pinkAccent],
+                      colors: [Colors.purpleAccent, Colors.pinkAccent],
                       begin: Alignment.topLeft,
                       end: Alignment.bottomRight,
                     ),
@@ -73,17 +74,17 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                     borderRadius: const BorderRadius.only(
-                      bottomLeft: Radius.circular(80),
-                      bottomRight: Radius.circular(80),
-                      topLeft: Radius.circular(35),
-                      topRight: Radius.circular(35),
+                      bottomLeft: Radius.circular(90),
+                      bottomRight: Radius.circular(90),
+                      topLeft: Radius.circular(40),
+                      topRight: Radius.circular(40),
                     )),
                 child: Padding(
-                  padding: const EdgeInsets.only(top: 15),
+                  padding: const EdgeInsets.only(top: 25),
                   child: Column(
                     children: [
                       Container(
-                        width: 120,
+                        width: 170,
                         height: 50,
                         decoration: BoxDecoration(
                             color: Colors.black,
@@ -128,8 +129,8 @@ class _HomeState extends State<Home> {
                                   });
                                 },
                                 child: Container(
-                                  width: 15,
-                                  height: 15,
+                                  width: 25,
+                                  height: 25,
                                   decoration: BoxDecoration(
                                     color: Colors.grey[400],
                                     borderRadius: BorderRadius.circular(100),
@@ -156,7 +157,8 @@ class _HomeState extends State<Home> {
                                 'Light',
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 8,
+                                    fontSize: 12,
+                                    fontFamily: 'cairo',
                                     fontWeight: FontWeight.w600),
                               )
                             ],
@@ -166,8 +168,8 @@ class _HomeState extends State<Home> {
                               _incrementCounter();
                             },
                             child: Container(
-                              width: 40,
-                              height: 40,
+                              width: 65,
+                              height: 65,
                               decoration: BoxDecoration(
                                 color: Colors.grey[400],
                                 borderRadius: BorderRadius.circular(100),
@@ -194,8 +196,8 @@ class _HomeState extends State<Home> {
                                   _resetCounter();
                                 },
                                 child: Container(
-                                  width: 15,
-                                  height: 15,
+                                  width: 25,
+                                  height: 25,
                                   decoration: BoxDecoration(
                                     color: Colors.grey[400],
                                     borderRadius: BorderRadius.circular(100),
@@ -222,7 +224,8 @@ class _HomeState extends State<Home> {
                                 'Reset',
                                 style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 8,
+                                    fontSize: 12,
+                                    fontFamily: 'cairo',
                                     fontWeight: FontWeight.w600),
                               ),
                             ],
@@ -233,7 +236,6 @@ class _HomeState extends State<Home> {
                   ),
                 ),
               ),
-          
             ],
           ),
         ),
